@@ -30,9 +30,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/dist/css/adminlte.min.css"
+              
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/dist/js/adminlte.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/dist/js/bootstrap.bundle.min.js",
+              "src/assets/dist/js/jquery-validation/jquery.validate.min.js",
+              "src/assets/dist/js/jquery-validation/additional-methods.js"
+             
+            ]
           },
           "configurations": {
             "production": {
@@ -100,5 +110,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

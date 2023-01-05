@@ -31,16 +31,22 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/dist/css/adminlte.min.css"
+              "src/assets/dist/css/adminlte.min.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css",
+              "src/assets/overlayScrollbars/css/OverlayScrollbars.min.css",
+              "src/assets/fontawesome-free/css/all.min.css"
               
             ],
             "scripts": [
               "src/assets/dist/js/adminlte.min.js",
+              "src/assets/dist/js/adminlte.js",
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "src/assets/dist/js/bootstrap.bundle.min.js",
               "src/assets/dist/js/jquery-validation/jquery.validate.min.js",
-              "src/assets/dist/js/jquery-validation/additional-methods.js"
+              "src/assets/dist/js/jquery-validation/additional-methods.js",
+              "src/assets/overlayScrollbars/js/OverlayScrollbars.min.js"
              
             ]
           },

@@ -30,7 +30,7 @@
             </p>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isAdmin">
           <a href="pages/widgets.html" class="nav-link">
             <i class=" fas fa-angle-right nav-icon"></i>
             <p>
@@ -39,7 +39,7 @@
             </p>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isAdmin">
           <a href="pages/widgets.html" class="nav-link">
             <i class=" fas fa-angle-right nav-icon"></i>
             <p>
@@ -128,4 +128,7 @@
     <!-- /.sidebar-menu -->
   </div>
   <!-- /.sidebar -->
+
+  
+  
 </aside>

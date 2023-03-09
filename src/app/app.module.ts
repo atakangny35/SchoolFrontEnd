@@ -9,9 +9,11 @@ import { AsideComponent } from './aside/aside.component';
 import { FooterComponent } from './footer/footer.component';
 import { IndexComponent } from './index/index.component';
 import { LoginComponent } from './login/login.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { StudentComponent } from './student/student.component';
+import { AuthInterceptor } from './Intercept/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     AsideComponent,
     FooterComponent,
     IndexComponent,
-    LoginComponent
+    LoginComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     )
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [{provide:'url',useValue:'https://localhost:7002/api/'}],
+  providers: [{provide:'url',useValue:'https://localhost:7002/api/'},
+  {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

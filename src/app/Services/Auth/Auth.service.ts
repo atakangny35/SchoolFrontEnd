@@ -18,7 +18,7 @@ constructor(private http:HttpClient,@Inject('url') private url:string, private r
 
 }
 login(model:LoginModel){
-  console.log(this.url+'Auth');
+ 
    this.http.post<TokenModel>(this.url+'auth',model).subscribe(next=>
     {
       localStorage.setItem('token',next.token);
@@ -33,7 +33,7 @@ login(model:LoginModel){
     });
 }
 
-isAuth(){
+isAuth():boolean{
   
   return localStorage.getItem(this.tokenStaroge) ?true:false;
 }

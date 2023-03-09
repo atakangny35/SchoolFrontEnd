@@ -1,0 +1,56 @@
+
+<ngx-spinner bdColor = "rgba(0,0,0,0.9)" size = "medium" color = "#fff" type = "ball-scale-multiple" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+
+
+
+
+<section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12" *ngFor="let class of ListOfUserListModel">
+                <div class="card">
+                    <div class="card-header">
+                    <h3 class="card-title">{{class.classId}}</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped classTable">
+                        <thead>
+                        <tr>
+                        <th>Kullanıcı no</th>
+                        <th>Ad</th>
+                        <th>Soyad</th>
+                        </tr>
+                        </thead>
+                        <tbody *ngFor="let user of class.userList;">
+                        <tr>
+                          <td>{{user.userid}}</td>
+                        <td>{{user.userName}}</td>
+                        <td>{{user.userSurname}}
+                        </td>
+                        
+                       
+                        </tr>
+                       
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                          <th>Kullanıcı no</th>
+                          <th>Ad</th>
+                          <th>Soyad</th>
+                        </tr>
+                        </tfoot>
+                    </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+          </div>
+      </div>
+   </div>
+</section>
+
+
+
+
+
+

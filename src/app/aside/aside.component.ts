@@ -14,19 +14,32 @@ export class AsideComponent implements  OnInit,AfterContentChecked{
 
   ngAfterContentChecked(): void {
     
-
+        if (this.decodedtoken==null){
       this.decodedtoken=this.authService.decodedToken;
+      this.isUserAdmin();
+        }
     
 
   }
 
  ngOnInit(): void {
+ let token= localStorage.getItem('token');
  
-  
+  if(token!=null ){
+    console.log('sds')
+      this.decodedtoken=this.Helper.decodeToken(token);
+      console.log(this.decodedtoken);
+      this.isUserAdmin();
+   
+  }
  }
 
 
+isUserAdmin(){
+  this.decodedtoken.role =='Admin'? this.isAdmin= true:this.isAdmin=false;
 
+  
+}
 
  
   hasMessage(){
